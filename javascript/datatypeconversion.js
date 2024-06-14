@@ -29,11 +29,11 @@ undefined. (undefined)number
 // let d="adad"
 // console.log(c+d);
 
-// console.log(1+2+"6");
-// console.log(1+2+"2"+2);
-// console.log("1"+2+4);
+console.log(1+2+"6");
+console.log(1+2+"2"+2);
+console.log("1"+2+4);
 
 
 // comparision
-console.log(2>"1");
-console.log("02">1);
+// console.log(2>"1");
+// console.log("02">1);
