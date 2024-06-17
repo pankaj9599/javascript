@@ -6,7 +6,6 @@
 // // 2)Properties are named Values.
 // // 3)Methods are Functions stored as Properties.
 // // 4)Properties can be primitive values, functions, or even other objects.
-// // create an object 
 
 // // In JavaScript, almost "everything" is an object.
 // // Objects are objects
@@ -20,14 +19,15 @@
 
 
 // // ++++++++++++++++++++{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}
-// const car={
+// // create an object 
+// const car1={
 //     carname:"maruti",
 //     modle:500,
 //     weight:900,
 // };
  
 // // this is how you can access the object items.
-// console.log(car.carname);
+// console.log(car1.carname);
 
 
 // // +++++++++++++++++++++++++++++++++++++++++++++++
@@ -72,6 +72,7 @@
 // // The object x is not a copy of person. The object x is person.
 // // The object x and the object person share the same memory address.
 // // Any changes to x will also change person:
+
 // const x=person1;
 // x.name="kumar";
 // console.log(person1.name);
@@ -80,44 +81,107 @@
 
 
 
-// PROPERTY++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-console.log("property");
-// THEORY++++++++++
-// * An Object is an Unordered Collection of Properties
-// * Properties are the most important part of JavaScript objects.
-// * Properties can be changed, added, deleted, and some are read only.
 
-const car={
-    carname:"maruti",
-    model:500,
-    weight:900,
+
+
+
+
+
+
+// // PROPERTY++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// console.log("property");
+// // THEORY++++++++++
+// // * An Object is an Unordered Collection of Properties
+// // * Properties are the most important part of JavaScript objects.
+// // * Properties can be changed, added, deleted, and some are read only.
+
+// const car={
+//     carname:"maruti",
+//     model:500,
+//     weight:900,
+// };
+
+// // there are two way to access the properties of object
+
+// let one=car.carname;
+// let two=car["model"];
+// // let three=car[weight];
+// console.log(`${one},${two}`);
+
+// // you can add new property to the existing object
+// car.color="red";
+// console.log(car.color);
+
+// //   you can also delete any property from the object
+
+// // The delete keyword deletes both the value of the property and the property itself.
+// // After deletion, the property cannot be used before it is added back again.
+// delete car.color;
+// console.log(car.color);
+
+
+// // nested object 
+
+// const preson ={
+//     name:"pankaj",
+//      car1:{
+//         model:44,
+//      }
+// };
+// console.log(preson.car1.model);
+
+
+
+
+
+
+
+
+// // METHODS++++++++++++++++++++++++++++++++++++++++++++++++++++
+// // In the example above, this refers to the person object:
+// // this.firstName means the firstName property of person.
+// // this.lastName means the lastName property of person.
+
+// // creating method inside the object 
+// console.log("METHODS");
+// const person ={
+//     firstname:"pankaj",
+//     lastname:"kumar",
+//     age:34,
+//     // creating the function 
+//     fullname:function(){
+//         return this.firstname+ " "+this.lastname +' '+ this.age;
+//     }
+// };
+// // you can access the method same way as property 
+// console.log(person.fullname());
+
+
+// // you can also create method outside the Object;*******
+// person.nameplusage=function(){
+//     return (this.firstname+' '+this.age).toUpperCase();
+// }
+
+// console.log(person.nameplusage());
+
+
+
+
+
+
+
+
+// DISPLAY++++++++++++++++++++++++++++++++++++++++
+console.log("DISPLAY");
+
+
+const person ={
+    firstname:"pankaj",
+    lastname:"kumar",
+    age:34,
+    // creating the function 
+    fullname:function(){
+        return this.firstname+ " "+this.lastname +' '+ this.age;
+    }
 };
-
-// there are three way to access the properties of object
-
-let one=car.carname;
-let two=car["model"];
-// let three=car[weight];
-console.log(`${one},${two}`);
-
-// you can add new property to the existing object
-car.color="red";
-console.log(car.color);
-
-//   you can also delete any property from the object
-
-// The delete keyword deletes both the value of the property and the property itself.
-// After deletion, the property cannot be used before it is added back again.
-delete car.color;
-console.log(car.color);
-
-
-// nested object 
-
-const preson ={
-    name:"pankaj",
-     car1:{
-        model:44,
-     }
-};
-console.log(preson.car1.model);
+Document.getElementById("demo").InnerHTML=person.firstname+', '+person.lastname;
