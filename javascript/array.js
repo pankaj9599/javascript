@@ -40,10 +40,7 @@ const usable_array=another_array.flat(Infinity);
 // console.log(Array.from("pankajkumar"));
 // console.log(Array.from({name:"pankajkumar"}));
 
-// using tostring you can convert array to string 
-const converttostring=usable_array.toString();
-//  console.log(converttostring);
-//  console.log(typeof converttostring);
+
 
 
 //  for loop in array 
@@ -151,7 +148,52 @@ const arr5=[1,2,3,[3,4,5],[2,4,[2,5]]];
 
 
 // SPLICE AND SLICE 
-console.log(array);
-console.log(array.slice(1,3));
-console.log(array);
-console.log(array.splice(3,4));
+// The splice() method adds new items to an array.
+// The slice() method slices out a piece of an array.
+
+// The slice() method creates a new array.
+// The slice() method does not remove any elements from the source array.
+// console.log(array.slice(1,3));
+// console.log(array);
+// first argument start and second argument number of element want to remove
+// console.log(array.splice(3,4));
+// console.log(array);
+
+// toString()
+// using tostring you can convert array to string 
+const converttostring=usable_array.toString();
+//  console.log(converttostring);
+//  console.log(typeof converttostring);
+
+
+
+// ARRAY SEARCHING FUNCTION 
+ const array2=[0,1,2,3,4,5,4,6,7];
+
+
+// indexOf()
+// array.indexOf(item, start)
+// The indexOf() method searches an array for an element value and returns its position.
+    //                    ( item,start)
+//  console.log(array2.indexOf(4,3));
+
+
+//  lastindexof()
+// array.lastIndexOf(item, start)
+// Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+// console.log(array2.lastIndexOf(4));
+
+
+// include()
+// Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+// console.log(array2.includes(19));
+
+// FIND()
+// The find() method returns the value of the first array element that passes a test function.
+// This example finds (returns the value of) the first element that is larger than 18:
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+console.log(first);
+function myFunction(value, index, array) {
+  return value > 18;
+}
