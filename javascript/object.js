@@ -18,16 +18,22 @@
 // // All JavaScript values, except primitives, are objects.
 
 
-// // ++++++++++++++++++++{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}
-// // create an object 
-// const car1={
-//     carname:"maruti",
-//     modle:500,
-//     weight:900,
-// };
- 
+// ++++++++++++++++++++{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}
+// create an object 
+// use symbol 
+const symb=Symbol("key1");
+const car1={
+    carname:"maruti",
+  [symb]:"mykey1",
+    modle:500,
+    weight:900,
+};
+// you  can freez the key 
+Object.freeze(car1);
+carname="k"; 
 // // this is how you can access the object items.
-// console.log(car1.carname);
+console.log(car1.carname);
+// console.log(car1[symb]);
 
 
 // // +++++++++++++++++++++++++++++++++++++++++++++++
@@ -105,7 +111,7 @@
 
 // let one=car.carname;
 // let two=car["model"];
-// // let three=car[weight];
+
 // console.log(`${one},${two}`);
 
 // // you can add new property to the existing object
@@ -172,16 +178,16 @@
 
 
 // DISPLAY++++++++++++++++++++++++++++++++++++++++
-console.log("DISPLAY");
+// console.log("DISPLAY");
 
 
-const person ={
-    firstname:"pankaj",
-    lastname:"kumar",
-    age:34,
-    // creating the function 
-    fullname:function(){
-        return this.firstname+ " "+this.lastname +' '+ this.age;
-    }
-};
-Document.getElementById("demo").InnerHTML=person.firstname+', '+person.lastname;
+// const person ={
+//     firstname:"pankaj",
+//     lastname:"kumar",
+//     age:34,
+//     // creating the function 
+//     fullname:function(){
+//         return this.firstname+ " "+this.lastname +' '+ this.age;
+//     }
+// };
+// Document.getElementById("demo").InnerHTML=person.firstname+', '+person.lastname;
