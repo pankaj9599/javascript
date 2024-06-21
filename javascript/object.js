@@ -29,11 +29,15 @@ const car1={
     weight:900,
 };
 // you  can freez the key 
-Object.freeze(car1);
-carname="k"; 
+// Object.freeze(car1);
+// carname="k"; 
 // // this is how you can access the object items.
-console.log(car1.carname);
+// console.log(car1.carname);
 // console.log(car1[symb]);
+car1.greeting=function(){
+  // console.log("hello");
+}
+console.log(car1.greeting());
 
 
 // // +++++++++++++++++++++++++++++++++++++++++++++++
@@ -191,3 +195,22 @@ console.log(car1.carname);
 //     }
 // };
 // Document.getElementById("demo").InnerHTML=person.firstname+', '+person.lastname;
+
+
+
+
+// singleton or declaring using constructor
+
+const instauser=new Object();
+const instaname="pankaj";
+const age=20;
+const loggedin=false;
+
+const regularuser={
+  gmail:pankajgmail.com,
+  fullname:{
+    fname:pankaj,
+    lname:kumar,
+  }
+}
+console.log(regularuser.fullname.fname);
