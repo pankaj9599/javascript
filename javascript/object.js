@@ -201,16 +201,59 @@ console.log(car1.greeting());
 
 // singleton or declaring using constructor
 
-const instauser=new Object();
-const instaname="pankaj";
-const age=20;
-const loggedin=false;
+const instauser={
+ instaname:"pankaj",
+ age:20,
+loggedin:false,}
 
 const regularuser={
-  gmail:pankajgmail.com,
+  gmail:"pankajgmail.com",
   fullname:{
-    fname:pankaj,
-    lname:kumar,
+    fname:"pankaj",
+    lname:"kumar",
   }
 }
-console.log(regularuser.fullname.fname);
+// console.log(regularuser.fullname.fname);
+
+
+
+
+// concatinate Object; 
+const ob1={1:"a",2:"b"};
+const ob2={3:"c",4:"d"};
+// spread method 
+const ob4={...ob1,...ob2};
+// console.log(ob4);
+//                      added in {} array;
+const ob3=Object.assign({},ob1,ob2);
+// console.log(ob3);
+// console.log(ob1);
+
+
+// you can print the key of object (stored in array);
+// console.log(Object.keys(instauser));
+// console.log(Object.values(instauser));
+
+// to find that you have a specific key 
+// console.log(instauser.hasOwnProperty('age'));
+
+
+
+
+const course={
+  coursename:"javascript",
+  courseprice:1999,
+  courseinstructor:"anil",
+}
+const {courseinstructor:instructor}=course;
+// console.log(courseinstructor);
+console.log(instructor);
+
+
+// json 
+
+{
+  "name":"pankaj",
+  "age":21,
+
+};
