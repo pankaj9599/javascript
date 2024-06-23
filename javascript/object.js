@@ -1,6 +1,13 @@
 // console.log("OBJECT");
 
 // // THEORY
+// new Object()   // A new Object object
+// new Array()    // A new Array object
+// new Map()      // A new Map object
+// new Set()      // A new Set object
+// new Date()     // A new Date object
+// new RegExp()   // A new RegExp object
+// new Function() // A new Function object
 
 // // 1)Objects are containers for Properties and Methods.
 // // 2)Properties are named Values.
@@ -252,8 +259,45 @@ console.log(instructor);
 
 // json 
 
-{
-  "name":"pankaj",
-  "age":21,
+// {
+//   "name":"pankaj",
+//   "age":21,
 
-};
+// };
+
+
+
+// {{{{{{{{{{{{{{{{++++++++++++++}}}}}}}}}}}}}}}}
+// constructor 
+// Sometimes we need to create many objects of the same type.
+// To create an object type we use an object constructor function.
+// It is considered good practice to name constructor functions with an upper-case first letter.
+
+
+function Person(first,last,age,weight){
+  this.firstname=first;
+  this.lastname=last;
+  this.agee=age;
+  this.wighttt=weight;
+  // A constructor function can also have methods:
+  this.fullname=function(){
+    return this.firstname+' '+this.lastname;
+  }
+
+}
+
+// Now we can use new Person() to create many new Person objects:
+const father =new Person("ashok","kumar",50,65);
+const mother =new Person("sita","devi",40,65);
+console.log(father);
+
+// You can NOT add a new property to an object constructor:
+
+// To add a new property, you must add it to the constructor function prototype:
+Person.prototype.nationality="hindi";
+// console.log(Person);
+// Adding a new method must be done to the constructor function prototype:
+Person.prototype.changename=function(name){
+  this.lastname=name;
+}
+
