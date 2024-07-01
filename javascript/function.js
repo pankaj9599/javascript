@@ -50,4 +50,16 @@ return getarray[2];
 }
 // console.log(print(array));
 
-console.log(print([1,2,3,4,5]));
+// console.log(print([1,2,3,4,5]));
+
+// ++++++++++++++++++++++++ arrow function +++++++++++++++++++++++++++++
+
+const users={
+    username:"pankaj",
+     age:21,
+     cost:199,
+     welcome :function(){
+console.log(`hello users ${this.username}`)
+     }
+}
+users.welcome();
