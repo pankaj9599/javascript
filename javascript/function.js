@@ -1,4 +1,4 @@
-console.log("function");
+// console.log("function");
 
 
 function myname(){
@@ -37,10 +37,10 @@ function handleuser(userss){
 // passing function;
 // handleuser(user);
 
-handleuser({
-username:"sam",
-age:23,
-});
+// handleuser({
+// username:"sam",
+// age:23,
+// });
 
 
 // now passing array 
@@ -60,6 +60,41 @@ const users={
      cost:199,
      welcome :function(){
 console.log(`hello users ${this.username}`)
+// if you console only this then it return the current context of object 
+console.log(this);
      }
 }
-users.welcome();
+// users.welcome();
+// users.username="janvi";
+// users.welcome();
+
+console.log(this);
+
+// const chaii= function(){
+//     let username="pankaj";
+//     console.log(this.username);
+// } 
+
+// const chaii = () =>{
+//     let username="pankaj";
+//     console.log(this.username);
+// } 
+// chaii();
+
+
+// arrow function 
+
+
+const add =(num1,num2)=>{
+    console.log(num1+num2);
+}
+// add(2,4)
+// if you use curly braces the you have to return the val 
+const add1=(num1,num2)=>{
+    return num1+num2;
+}
+console.log(add1(5,6));
+
+// no need to return val if you write code in one line 
+const add2= (num1,num2)=> (num1+num2);
+console.log(add2(2,5));
