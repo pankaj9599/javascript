@@ -120,8 +120,22 @@ const people=[
     {name:"pranjal",age:22,weight:87,height:6},
 ]
 
-let user=people.filter((pe)=>(pe.height>6));
- user=people.filter((pe)=>(pe.weight>75));
+// let user=people.filter((pe)=>());
+ let user=people.filter((pe)=>(pe.weight>75&&pe.height>=6));
+// console.log(user);
 
-console.log(user);
 
+// Map 
+// const mynum=[1,2,3,4,5,6,7];
+// let numberss=mynum.map((it)=>it+10);
+// console.log(numberss);
+
+
+// CHAINING 
+
+const mynum=[1,2,3,4,5,6,7];
+let numberss=mynum
+                  .map((it)=>it*10)
+                  .map((it)=>it+1)
+                  .filter((it)=>it>50);
+console.log(numberss);  
