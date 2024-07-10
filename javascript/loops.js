@@ -138,4 +138,57 @@ let numberss=mynum
                   .map((it)=>it*10)
                   .map((it)=>it+1)
                   .filter((it)=>it>50);
-console.log(numberss);  
+// console.log(numberss);  
+
+// REDUCE 
+
+
+const intarray=[1,2,3,4,5];
+const initial=0;
+const sum=intarray.reduce(
+    (acc,cur)=>acc+cur,initial
+);
+console.log(sum);
+
+
+// REDUCE (FUNCTION)
+const sum1=intarray.reduce(function (acc,curr) {
+  return  acc+curr},0)
+console.log(sum1);
+
+// using arrow function 
+const sum2=intarray.reduce( (acc,curr)=> 
+ (acc+curr),0)
+console.log(sum2);
+
+
+// EXAMPLE /\
+const shopingcart=[
+    {
+        course:"hindi",
+        price:999,
+        timetof:10,
+    },
+    {
+        course:"english",
+        price:990,
+        timetof:10,
+    },
+    {
+        course:"maths",
+        price:900,
+        timetof:10,
+    },
+    {
+        course:"science",
+        price:800,
+        timetof:10,
+    }
+
+]
+
+let totalbill=shopingcart.reduce((acc,item)=>acc+item.price,0);
+console.log(totalbill);
+
+ totalbill=shopingcart.reduce((acc,item)=>acc+item.timetof,0);
+ console.log(totalbill);
