@@ -28,9 +28,16 @@ const comb=[...arr,...arr1];
 // console.log(comb);
 
 
-const arbi=[1,2,3];
-const [one,two ,three]=arbi;
-console.log(typeof one);
-const sum=(one,two,three)=>one+two+three;
+// const arbi=[1,2,3];
+// const [one,two ,three]=arbi;
+// console.log(typeof one);
+// const sum=(one,two,three)=>one+two+three;
 
-console.log(sum);
+// console.log(sum);
+
+// let nums1=5;
+let nums2=6;
+const product =function(nums1,nums2){
+return nums1*nums2;
+}
+console.log(product(3,nums2));
